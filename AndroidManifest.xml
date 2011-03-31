@@ -16,12 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-		<activity android:name=".Cafeteria"
-				  android:label="@string/cafeteria_title" />
-				  <activity android:name=".CafeteriaMenuDaySelector"
+				  
+				  <activity android:name=".cafeteria.CafeteriaMenuDaySelector"
 				  android:label="@string/cafeteria_title"/>
 				  
-				  <activity android:name="MenuDisplaympanion.MenuDisplay" />
+				  <activity android:name=".cafeteria.MenuDisplay" />
+				  <activity android:name=".AboutScreen" />
     </application>
 </manifest>

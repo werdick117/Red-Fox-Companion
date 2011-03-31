@@ -5,6 +5,7 @@
     <string name="cafeteria_label">Cafeteria\nMenu</string>
     <string name="filler">This is filler text</string>
     <string name="main_title">Red Fox Companion</string>
+    <string name="about_label">About</string>
     <string name="cafeteria_title">Cafeteria menu</string>
     <string name="sunday_button">Sun</string>
     <string name="monday_button">Mon</string>
@@ -13,4 +14,11 @@
     <string name="thursday_button">Thurs</string>
     <string name="friday_button">Fri</string>
     <string name="saturday_button">Sat</string>
+    <string name="about_text">This Marist college focused app has been 
+    designed to provide useful information for marist students, or 
+    anyone who happens to be on campus.  This app is open source and 
+    can be found at GitHub, just search \'Red Fox Companion\'.  If you 
+    have any questions, comments, or suggestions related to the app 
+    please feel free to contact the developers at: redfoxcompanion@gmail.com
+   </string>
 </resources>

@@ -1,16 +1,16 @@
 package org.redfoxcompanion;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
+
 import android.content.Intent;
 import android.os.Bundle;
 
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import java.util.HashMap;
 
-import org.redfoxcompanion.threads.CafeteriaMenuSync;
+import org.redfoxcompanion.cafeteria.CafeteriaMenuDaySelector;
+
 
 /**
  * 
@@ -20,8 +20,6 @@ import org.redfoxcompanion.threads.CafeteriaMenuSync;
 public class LandingScreen extends Activity implements OnClickListener
 {
 	private static final String TAG = "Red Fox Companion";
-	private boolean menuReady = false;
-	private ProgressDialog dialog;
 	
 	
     /** Called when the activity is first created. */
@@ -37,34 +35,28 @@ public class LandingScreen extends Activity implements OnClickListener
         
         View academicButton = findViewById(R.id.academic_button);
         academicButton.setOnClickListener(this);
+        
+        View aboutButton = findViewById(R.id.about_button);
+        aboutButton.setOnClickListener(this);
     }
     
 	@Override
 	public void onClick(View v) 
 	{
-		
+		Intent intent = null;
 		switch(v.getId())
 		{
 		case R.id.cafeteria_button:
-			Log.d(TAG, "Attempting to start Cafeteria activity");
-			dialog = ProgressDialog.show(LandingScreen.this, "Retrieving Menu Information", "Please wait...", true);
-			CafeteriaMenuSync menuSync = new CafeteriaMenuSync();
-			menuSync.execute(this);
-			
+			Log.d(TAG, "Attempting to start CafeteriaMenuDaySelector activity");
+		    intent = new Intent(this, CafeteriaMenuDaySelector.class);
+			startActivity(intent);
+			break;
+		case R.id.about_button:
+			Log.d(TAG, "Attempting to start AboutScreen activity");
+			intent = new Intent(this, AboutScreen.class);
+			startActivity(intent);
 			break;
 		}
 	}
-	
-	public void destroyProgressDialog()
-	{
-		dialog.dismiss();
-	}
-	
-	public void createCafeteriaMenu(Bundle data)
-	{
-		Intent cafeteriaActivityIntent = new Intent(this, CafeteriaMenuDaySelector.class);
-		cafeteriaActivityIntent.putExtras(data);
-		
-		startActivity(cafeteriaActivityIntent);
-	} 
+
 }

@@ -24,7 +24,6 @@
 			 android:padding="5dip"
 			 
 			 >
-
 		  
 	<TableRow android:layout_width="match_parent" 
 		  android:layout_height="wrap_content" 
@@ -46,7 +45,18 @@ android:text="@string/cafeteria_label" />
 
 		  </TableRow>
 		  
+		  <TableRow android:layout_width="match_parent" 
+		  android:layout_height="wrap_content" 
+		  android:id="@+id/tableRow2"
+		  android:gravity="center"
+		  >
+<Button
+android:id="@+id/about_button"
+android:layout_height="fill_parent"
+android:layout_width="fill_parent"
+android:text="@string/about_label" />
 
+		  </TableRow>
 
 </TableLayout>
 </LinearLayout>
