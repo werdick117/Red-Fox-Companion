@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RedFoxCompanion</string>
+    <string name="academic_label">Academic\nCalander</string>
+    <string name="cafeteria_label">Cafeteria\nMenu</string>
+    <string name="filler">This is filler text</string>
+    <string name="main_title">Red Fox Companion</string>
+    <string name="cafeteria_title">Cafeteria menu</string>
+    <string name="sunday_button">Sun</string>
+    <string name="monday_button">Mon</string>
+    <string name="tuesday_button">Tues</string>
+    <string name="wednesday_button">Wed</string>
+    <string name="thursday_button">Thurs</string>
+    <string name="friday_button">Fri</string>
+    <string name="saturday_button">Sat</string>
+</resources>
