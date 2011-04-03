@@ -18,7 +18,8 @@
         </activity>
 				  
 				  <activity android:name=".cafeteria.CafeteriaMenuDaySelector"
-				  android:label="@string/cafeteria_title"/>
+				  android:label="@string/cafeteria_title"
+				  android:configChanges="orientation|keyboardHidden" />
 				  
 				  <activity android:name=".cafeteria.MenuDisplay" />
 				  <activity android:name=".AboutScreen" />
