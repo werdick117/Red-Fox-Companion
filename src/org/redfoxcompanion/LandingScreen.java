@@ -15,14 +15,17 @@ import org.redfoxcompanion.cafeteria.CafeteriaMenuDaySelector;
 /**
  * 
  * @author Steve Werdick
- *
+ * This is the screen the user can first interact with
  */
 public class LandingScreen extends Activity implements OnClickListener
 {
 	private static final String TAG = "Red Fox Companion";
 	
 	
-    /** Called when the activity is first created. */
+    /*
+     * (non-Javadoc)
+     * @see android.app.Activity#onCreate(android.os.Bundle)
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) 
     {
@@ -40,6 +43,10 @@ public class LandingScreen extends Activity implements OnClickListener
         aboutButton.setOnClickListener(this);
     }
     
+    /*
+     * (non-Javadoc)
+     * @see android.view.View.OnClickListener#onClick(android.view.View)
+     */
 	@Override
 	public void onClick(View v) 
 	{
