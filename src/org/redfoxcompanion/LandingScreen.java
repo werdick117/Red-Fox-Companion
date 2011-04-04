@@ -5,9 +5,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import org.redfoxcompanion.twitter.ScrollingTextView;
+import org.redfoxcompanion.twitter.TwitterWorkerThread;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 
 import org.redfoxcompanion.cafeteria.CafeteriaMenuDaySelector;
 
@@ -41,6 +44,18 @@ public class LandingScreen extends Activity implements OnClickListener
         
         View aboutButton = findViewById(R.id.about_button);
         aboutButton.setOnClickListener(this);
+        
+        new TwitterWorkerThread().execute(this);
+    }
+    
+    /*
+     * This method sets the twitter display box to a tweet
+     * @param The tweet to display
+     */
+    public void setTwitterText(String text)
+    {
+    	TextView t = (TextView)findViewById(R.id.twitter_display);
+    	t.setText(text);
     }
     
     /*
