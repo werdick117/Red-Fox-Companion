@@ -81,14 +81,14 @@ public class CafeteriaMenuDaySelector extends Activity implements
 	 */
 	@Override
 	public void onClick(View v) {
-		CafeteriaMenuSync menuSync;
+		CafeteriaMenuWorkerThread menuSync;
 
 		switch (v.getId()) {
 		case R.id.sunday_button:
 			dayPressed = "sunday";
 			dialog = ProgressDialog.show(CafeteriaMenuDaySelector.this,
 					"Retrieving Menu Information", "Please wait...", true);
-			menuSync = new CafeteriaMenuSync();
+			menuSync = new CafeteriaMenuWorkerThread();
 			menuSync.execute(this);
 
 			break;
@@ -98,7 +98,7 @@ public class CafeteriaMenuDaySelector extends Activity implements
 			dayPressed = "monday";
 			dialog = ProgressDialog.show(CafeteriaMenuDaySelector.this,
 					"Retrieving Menu Information", "Please wait...", true);
-			menuSync = new CafeteriaMenuSync();
+			menuSync = new CafeteriaMenuWorkerThread();
 			menuSync.execute(this);
 			break;
 
@@ -106,7 +106,7 @@ public class CafeteriaMenuDaySelector extends Activity implements
 			dayPressed = "tuesday";
 			dialog = ProgressDialog.show(CafeteriaMenuDaySelector.this,
 					"Retrieving Menu Information", "Please wait...", true);
-			menuSync = new CafeteriaMenuSync();
+			menuSync = new CafeteriaMenuWorkerThread();
 			menuSync.execute(this);
 			break;
 
@@ -114,7 +114,7 @@ public class CafeteriaMenuDaySelector extends Activity implements
 			dayPressed = "wednesday";
 			dialog = ProgressDialog.show(CafeteriaMenuDaySelector.this,
 					"Retrieving Menu Information", "Please wait...", true);
-			menuSync = new CafeteriaMenuSync();
+			menuSync = new CafeteriaMenuWorkerThread();
 			menuSync.execute(this);
 			break;
 
@@ -122,7 +122,7 @@ public class CafeteriaMenuDaySelector extends Activity implements
 			dayPressed = "thursday";
 			dialog = ProgressDialog.show(CafeteriaMenuDaySelector.this,
 					"Retrieving Menu Information", "Please wait...", true);
-			menuSync = new CafeteriaMenuSync();
+			menuSync = new CafeteriaMenuWorkerThread();
 			menuSync.execute(this);
 			break;
 
@@ -130,7 +130,7 @@ public class CafeteriaMenuDaySelector extends Activity implements
 			dayPressed = "friday";
 			dialog = ProgressDialog.show(CafeteriaMenuDaySelector.this,
 					"Retrieving Menu Information", "Please wait...", true);
-			menuSync = new CafeteriaMenuSync();
+			menuSync = new CafeteriaMenuWorkerThread();
 			menuSync.execute(this);
 			break;
 
@@ -138,7 +138,7 @@ public class CafeteriaMenuDaySelector extends Activity implements
 			dayPressed = "saturday";
 			dialog = ProgressDialog.show(CafeteriaMenuDaySelector.this,
 					"Retrieving Menu Information", "Please wait...", true);
-			menuSync = new CafeteriaMenuSync();
+			menuSync = new CafeteriaMenuWorkerThread();
 			menuSync.execute(this);
 			break;
 		}

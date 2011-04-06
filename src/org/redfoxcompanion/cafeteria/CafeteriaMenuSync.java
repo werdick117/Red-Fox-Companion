@@ -1,14 +1,15 @@
 package org.redfoxcompanion.cafeteria;
 
 import android.os.AsyncTask;
-
-import java.io.IOException;
-import org.htmlcleaner.TagNode;
-import org.htmlcleaner.XPatherException;
-import org.redfoxcompanion.utils.Helper;
-
 import android.os.Bundle;
 import android.util.Log;
+
+import org.htmlcleaner.XPatherException;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+import org.redfoxcompanion.utils.Helper;
+
+import java.io.IOException;
 
 /*
  * @author Steve Werdick
@@ -57,22 +58,12 @@ public class CafeteriaMenuSync extends
 	 * day to scrape for menu information
 	 */
 	private Bundle scrape(String day) throws XPatherException, IOException {
-		String breakfastXpath = "//td[@id='"
-				+ day
-				+ "']//table//tbody//tr[@class='brk']//td[@class='menuitem']//div[@class='menuitem']//span";
-		String lunchXpath = "//td[@id='"
-				+ day
-				+ "']//table//tbody//tr[@class='lun']//td[@class='menuitem']//div[@class='menuitem']//span";
-		String dinnerXpath = "//td[@id='"
-				+ day
-				+ "']//table//tbody//tr[@class='din']//td[@class='menuitem']//div[@class='menuitem']//span";
+		Document doc = Helper.retrieveHTML("http://maristdining.com/WeeklyMenu.htm");
+		Elements dayElements = doc.select("td[id=" + day + "]");
 
-		TagNode root = Helper
-				.retrieveHTML("http://maristdining.com/WeeklyMenu.htm");
-
-		String breakfast = Helper.getScrapeText(root, breakfastXpath);
-		String lunch = Helper.getScrapeText(root, lunchXpath);
-		String dinner = Helper.getScrapeText(root, dinnerXpath);
+		String breakfast = Helper.getScrapeText(dayElements, "tr[class=brk] > td[class=menuitem]");
+		String lunch = Helper.getScrapeText(dayElements, "tr[class=lun] > td[class=menuitem]");
+		String dinner = Helper.getScrapeText(dayElements, "tr[class=din] > td[class=menuitem]");
 
 		Log.d(TAG, "finished scrape");
 		Bundle data = new Bundle();

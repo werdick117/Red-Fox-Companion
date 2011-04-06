@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="30dip"
+    android:padding="15dip"
     android:background="@drawable/main_background"
     >
     
@@ -13,7 +13,7 @@
 	 android:layout_width="wrap_content" 
     android:layout_height="wrap_content" 
     android:layout_gravity="center"
-    android:layout_marginBottom="25dip"
+    android:layout_marginBottom="10dip"
 	android:textSize="24.5sp"
 	android:textColor="@color/text_white" />
     

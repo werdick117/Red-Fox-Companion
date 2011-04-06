@@ -20,29 +20,31 @@ public final class R {
         public static final int main_background=0x7f020001;
     }
     public static final class id {
+        public static final int ScrollView01=0x7f060003;
         public static final int about_button=0x7f060006;
         public static final int about_content=0x7f060000;
-        public static final int academic_button=0x7f060004;
-        public static final int cafeteria_button=0x7f060005;
-        public static final int day_selected=0x7f060007;
-        public static final int friday_button=0x7f06000e;
-        public static final int menu_display=0x7f060008;
+        public static final int academic_button=0x7f060005;
+        public static final int cafeteria_button=0x7f060004;
+        public static final int day_selected=0x7f060008;
+        public static final int friday_button=0x7f06000f;
+        public static final int main_relativeLayout=0x7f060002;
+        public static final int menu_display=0x7f060009;
         public static final int monday_breakfast=0x7f060001;
-        public static final int monday_button=0x7f06000a;
-        public static final int saturday_button=0x7f06000f;
-        public static final int sunday_button=0x7f060009;
-        public static final int tableLayout1=0x7f060002;
-        public static final int tableRow2=0x7f060003;
-        public static final int thursday_button=0x7f06000d;
-        public static final int tuesday_button=0x7f06000b;
-        public static final int wednesday_button=0x7f06000c;
+        public static final int monday_button=0x7f06000b;
+        public static final int saturday_button=0x7f060010;
+        public static final int sunday_button=0x7f06000a;
+        public static final int thursday_button=0x7f06000e;
+        public static final int tuesday_button=0x7f06000c;
+        public static final int twitter_display=0x7f060007;
+        public static final int wednesday_button=0x7f06000d;
     }
     public static final class layout {
         public static final int about=0x7f030000;
         public static final int cafeteria=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int menudisplay=0x7f030003;
-        public static final int weekdays=0x7f030004;
+        public static final int list_item=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int menudisplay=0x7f030004;
+        public static final int weekdays=0x7f030005;
     }
     public static final class string {
         public static final int about_label=0x7f050005;
