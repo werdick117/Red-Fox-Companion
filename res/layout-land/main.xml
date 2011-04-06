@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:background="@drawable/main_background"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:padding="15dip">
+	
+	<TextView
+			    android:layout_width="fill_parent" 
+    	   		android:layout_height="wrap_content" 
+				android:textSize="24.5sp"
+				android:gravity="center"
+				android:textColor="@color/text_white"
+				android:text="@string/main_title" />
+	
+	<ScrollView android:id="@+id/ScrollView01"
+android:layout_width="fill_parent"
+android:layout_height="0dip"
+android:layout_weight="1"
+>
+
+	<TableLayout
+	android:layout_width="fill_parent"
+	android:layout_height="0dip"
+	android:gravity="center">
+		<TableRow
+		android:gravity="center">
+		<Button
+android:id="@+id/cafeteria_button"
+android:text="@string/cafeteria_label"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_width="fill_parent"
+/>
+<Button
+android:id="@+id/academic_button"
+android:text="@string/academic_label"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_width="fill_parent"
+/>
+		</TableRow>
+		<TableRow>
+		<Button
+android:id="@+id/about_button"
+android:text="@string/about_label"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_width="fill_parent"
+/>
+		</TableRow>
+</TableLayout>
+	</ScrollView>
+	
+	<TextView
+		android:textColor="@color/text_white"
+   	    android:background="@color/translucent_black"
+   	    android:textSize="15sp"
+	    android:text="Single-line text view that scrolls automatically if the text is too long to fit in the widget" 
+        android:singleLine="true" 
+        android:id="@+id/twitter_display"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true" 
+        android:scrollHorizontally="true"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+   	    
+				/>
+				
+</LinearLayout>

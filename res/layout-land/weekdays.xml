@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="30dip"
+    android:background="@drawable/main_background"
+    >
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="12dip"
+    >
+    <TableRow>
+    <Button
+android:id="@+id/sunday_button"
+android:text="@string/sunday_button"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_width="fill_parent"
+/>
+<Button
+android:id="@+id/monday_button"
+android:text="@string/monday_button"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_width="fill_parent"
+/>
+
+    <Button
+android:id="@+id/tuesday_button"
+android:text="@string/tuesday_button"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_width="fill_parent"
+/>
+    
+    <Button
+android:id="@+id/wednesday_button"
+android:text="@string/wednesday_button"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_width="fill_parent"
+/>
+
+
+</TableRow>
+    <TableRow>
+    <Button
+android:id="@+id/thursday_button"
+android:text="@string/thursday_button"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_width="fill_parent"
+/>
+<Button
+android:id="@+id/friday_button"
+android:text="@string/friday_button"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_width="fill_parent"
+/>
+    
+<Button
+android:id="@+id/saturday_button"
+android:text="@string/saturday_button"
+android:layout_height="wrap_content"
+android:layout_weight="1"
+android:layout_width="fill_parent"
+/>
+
+</TableRow>
+
+
+
+</TableLayout>
+</LinearLayout>
